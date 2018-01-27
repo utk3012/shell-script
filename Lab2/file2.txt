@@ -1,0 +1,6 @@
+RegistrationNo:Name:Department:Branch:Section:Sub1:Sub2
+utkarsh:Utkarsh:ICT:CCE:A:1:1
+121:raj:ICT:CCE:B:1:1
+3243:pl:CSE:CSE:A:5:5
+121:chetan:IT:L:76:56
+23:JJ:IT:A:23:43

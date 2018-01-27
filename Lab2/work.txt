@@ -1,0 +1,117 @@
+student1@MIT-ICT-LAB8-01:~$ cd 160953146
+student1@MIT-ICT-LAB8-01:~/160953146$ ls
+Junk  Lab1
+student1@MIT-ICT-LAB8-01:~/160953146$ mkdir Lab2
+student1@MIT-ICT-LAB8-01:~/160953146$ cd Lab2
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ ls
+file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file2.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file3.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file2.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep simply file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep Lorem file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep Lore file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ man grep
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -v Lorem file1.txt
+when an unknown printer took a galley of type and scrambled it to make a
+type specimen book. It has survived not only five centuries, but also the
+leap into electronic typesetting, remaining essentially unchanged.
+
+It was popularised in the 1960s with the release of Letraset sheets 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -vLorem. file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -v Lorem. file1.txt
+when an unknown printer took a galley of type and scrambled it to make a
+type specimen book. It has survived not only five centuries, but also the
+leap into electronic typesetting, remaining essentially unchanged.
+
+It was popularised in the 1960s with the release of Letraset sheets 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem. file1.txt
+Lorem.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x "Lorem Ipsum is simply dummy text of the printing and typesetting industry." file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep ^L file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+Lorem.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file3.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ sort file3.txt
+embarrassing hidden in the middle of text. All the Lorem Ipsum generators on 
+first true generator on the Internet.
+majority have suffered alteration in some form, by injected humour, or 
+randomised words which don't look even slightly believable. If you are going 
+the Internet tend to repeat predefined chunks as necessary, making this the 
+There are many variations of passages of Lorem Ipsum available, but the 
+to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ sort -r file3.txt
+to use a passage of Lorem Ipsum, you need to be sure there isn't anything 
+There are many variations of passages of Lorem Ipsum available, but the 
+the Internet tend to repeat predefined chunks as necessary, making this the 
+randomised words which don't look even slightly believable. If you are going 
+majority have suffered alteration in some form, by injected humour, or 
+first true generator on the Internet.
+embarrassing hidden in the middle of text. All the Lorem Ipsum generators on 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ cut -c 1-3 file2.txt
+Nam
+Utk
+Raj
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ cut -d " " -f 1-2 file2.txt
+Name Rollno
+Utkarsh 34
+Raj 54
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ ls -l | cut -d " " -f 1-2
+total 16
+-rw-rw-r-- 1
+-rw-rw-r-- 1
+-rw-rw-r-- 1
+-rw-rw-r-- 1
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ tr "[a-z]" '[A-Z]' < file3.txt
+THERE ARE MANY VARIATIONS OF PASSAGES OF LOREM IPSUM AVAILABLE, BUT THE 
+MAJORITY HAVE SUFFERED ALTERATION IN SOME FORM, BY INJECTED HUMOUR, OR 
+RANDOMISED WORDS WHICH DON'T LOOK EVEN SLIGHTLY BELIEVABLE. IF YOU ARE GOING 
+TO USE A PASSAGE OF LOREM IPSUM, YOU NEED TO BE SURE THERE ISN'T ANYTHING 
+EMBARRASSING HIDDEN IN THE MIDDLE OF TEXT. ALL THE LOREM IPSUM GENERATORS ON 
+THE INTERNET TEND TO REPEAT PREDEFINED CHUNKS AS NECESSARY, MAKING THIS THE 
+FIRST TRUE GENERATOR ON THE INTERNET.
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ chmod a+x file2.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ chmod 777 file3.txt
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -E [1-4] file1.txt
+1Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+It was popularised in the 1960s with the release of Letraset sheets 
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep ICT file2.txt
+utkarsh:Utkarsh:ICT:CCE:A:1:1
+121:raj:ICT:CCE:B:1:1
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep ICT file2.txt | wc -w
+2
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -E ^[A-Z] file1.txt
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+It was popularised in the 1960s with the release of Letraset sheets 
+Lorem.
+
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ sed -e 's/IT/InformationTechnology/' file2.txt
+RegistrationNo:Name:Department:Branch:Section:Sub1:Sub2
+utkarsh:Utkarsh:ICT:CCE:A:1:1
+121:raj:ICT:CCE:B:1:1
+3243:pl:CSE:CSE:A:5:5
+121:chetan:InformationTechnology:L:76:56
+23:JJ:InformationTechnology:A:23:43
+

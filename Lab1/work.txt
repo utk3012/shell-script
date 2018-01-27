@@ -1,0 +1,41 @@
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ cd .. 
+student1@MIT-ICT-LAB8-01:~/160953146$ mkdir Junk
+student1@MIT-ICT-LAB8-01:~/160953146$ cd Junk
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ touch file11.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ touch file12.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ touch file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ touch file15.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ ls
+file11.txt  file12.txt  file15.txt  file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file11.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file12.txt 
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file1
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file15.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ mkdir file1
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ mv file1?.txt file1
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ ls
+file1  file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ cd file1/
+student1@MIT-ICT-LAB8-01:~/160953146/Junk/file1$ ls
+file11.txt  file12.txt  file15.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk/file1$ cd ..
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ rm -r file1
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ ls
+file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ touch count.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano 
+count.txt   file24.txt  
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ nano file24.txt 
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ head file24.txt | wc -c
+50
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ cat file24.txt 
+hello there 
+this is file24.txt
+Author  - utkarsh
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ ls | wc file24.txt -c
+50 file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ head file24.txt -n 2 | wc -c | cat >> count.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ cat count.txt 
+32
+

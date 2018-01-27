@@ -1,0 +1,88 @@
+student1@MIT-ICT-LAB8-01:~$ cd 160953146
+student1@MIT-ICT-LAB8-01:~/160953146$ ls
+Junk  Lab1
+student1@MIT-ICT-LAB8-01:~/160953146$ cd Junk
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ ls
+count.txt  file24.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ Lab1
+Lab1: command not found
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ cd Lab1
+bash: cd: Lab1: No such file or directory
+student1@MIT-ICT-LAB8-01:~/160953146/Junk$ cd ../Lab1
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ ls
+exercise.txt  SS1.txt  SS2.txt  SS3.txt  SS4.txt  work.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ cd ..
+student1@MIT-ICT-LAB8-01:~/160953146$ mkdir Lab2
+student1@MIT-ICT-LAB8-01:~/160953146$ cd Lab2
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file2.txt\
+> ^C
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ ls
+file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file2.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ touch file3.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file2.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep simply file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep Lorem file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep Lore file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+containing Lorem Ipsum passages, and more recently with desktop publishing 
+software like Aldus PageMaker including versions of Lorem Ipsum.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lore file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ man grep
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ nano file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -v Lorem file1.txt
+when an unknown printer took a galley of type and scrambled it to make a
+type specimen book. It has survived not only five centuries, but also the
+leap into electronic typesetting, remaining essentially unchanged.
+
+It was popularised in the 1960s with the release of Letraset sheets 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -vLorem. file1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -v Lorem. file1.txt
+when an unknown printer took a galley of type and scrambled it to make a
+type specimen book. It has survived not only five centuries, but also the
+leap into electronic typesetting, remaining essentially unchanged.
+
+It was popularised in the 1960s with the release of Letraset sheets 
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem. file1.txt
+Lorem.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+> ^C
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem Ipsum is simply dummy text of the printing and typesettin
+grep: simply: No such file or directory
+grep: dummy: No such file or directory
+grep: text: No such file or directory
+grep: of: No such file or directory
+grep: the: No such file or directory
+grep: printing: No such file or directory
+grep: and: No such file or directory
+grep: typesetting: No such file or directory
+grep: industry.: No such file or directory
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x Lorem Ipsum is simply dummy text of the printing and typesetting industry.  file1.txt 
+grep: Ipsum: No such file or directory
+grep: is: No such file or directory
+grep: simply: No such file or directory
+grep: dummy: No such file or directory
+grep: text: No such file or directory
+grep: of: No such file or directory
+grep: the: No such file or directory
+grep: printing: No such file or directory
+grep: and: No such file or directory
+grep: typesetting: No such file or directory
+grep: industry.: No such file or directory
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep -x "Lorem Ipsum is simply dummy text of the printing and typesetting industry." file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+student1@MIT-ICT-LAB8-01:~/160953146/Lab2$ grep ^L file1.txt
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+Lorem.

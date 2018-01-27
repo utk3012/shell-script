@@ -1,0 +1,27 @@
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ ls *.txt
+SS1.txt  SS2.txt  SS3.txt  SS4.txt  work.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ ls *[0-9]*.txt
+SS1.txt  SS2.txt  SS3.txt  SS4.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ ls ????*.txt
+work.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ ls [!aeiou]*.txt
+SS1.txt  SS2.txt  SS3.txt  SS4.txt  work.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ find . -name "*.txt"
+./SS4.txt
+./work.txt
+./SS2.txt
+./SS3.txt
+./SS1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ find . -name "*[0-9]*.txt"
+./SS4.txt
+./SS2.txt
+./SS3.txt
+./SS1.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ find . -name "????*.txt"
+./work.txt
+student1@MIT-ICT-LAB8-01:~/160953146/Lab1$ find . -name "[!aeiou]*.txt"
+./SS4.txt
+./work.txt
+./SS2.txt
+./SS3.txt
+./SS1.txt
