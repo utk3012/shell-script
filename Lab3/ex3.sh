@@ -1,4 +1,4 @@
-x=$(find . -name *.txt)
+x=$(find . -name "*.txt")
 for i in $x; do
-echo $i
+mv "$i" "${i%.txt}.text"
 done
