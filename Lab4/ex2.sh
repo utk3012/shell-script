@@ -1,4 +1,3 @@
-#!/bin/bash
 for i in "$@"; do
 echo "Do you want to delete" $i "(y/n)"
 read ch
